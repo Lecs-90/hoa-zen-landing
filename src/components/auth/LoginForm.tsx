@@ -7,9 +7,10 @@ import { Loader2 } from "lucide-react";
 
 interface LoginFormProps {
   onSuccess: () => void;
+  userType?: 'admin' | 'resident';
 }
 
-const LoginForm = ({ onSuccess }: LoginFormProps) => {
+const LoginForm = ({ onSuccess, userType = 'admin' }: LoginFormProps) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -53,7 +54,7 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
       </div>
       <Button type="submit" className="w-full" disabled={isLoading}>
         {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-        Sign In
+        Sign In as {userType === 'admin' ? 'Admin' : 'Resident'}
       </Button>
     </form>
   );
