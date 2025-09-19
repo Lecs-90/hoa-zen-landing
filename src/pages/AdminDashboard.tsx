@@ -6,6 +6,7 @@ import AdminSidebar from "@/components/admin/AdminSidebar";
 import DashboardOverview from "@/components/admin/DashboardOverview";
 import AnnouncementsTab from "@/components/admin/AnnouncementsTab";
 import ResidentsTab from "@/components/admin/ResidentsTab";
+import SettingsTab from "@/components/admin/SettingsTab";
 
 const AdminDashboard = () => {
   const { user, signOut } = useAuth();
@@ -27,12 +28,7 @@ const AdminDashboard = () => {
           </div>
         );
       case "settings":
-        return (
-          <div className="space-y-6">
-            <h1 className="text-2xl font-bold text-foreground">Settings</h1>
-            <p className="text-muted-foreground">Community settings coming soon...</p>
-          </div>
-        );
+        return <SettingsTab />;
       default:
         return <DashboardOverview />;
     }
