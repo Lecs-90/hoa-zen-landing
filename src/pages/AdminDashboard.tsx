@@ -6,6 +6,7 @@ import AdminSidebar from "@/components/admin/AdminSidebar";
 import DashboardOverview from "@/components/admin/DashboardOverview";
 import AnnouncementsTab from "@/components/admin/AnnouncementsTab";
 import ResidentsTab from "@/components/admin/ResidentsTab";
+import EventsTab from "@/components/admin/EventsTab";
 import SettingsTab from "@/components/admin/SettingsTab";
 
 const AdminDashboard = () => {
@@ -20,6 +21,8 @@ const AdminDashboard = () => {
         return <AnnouncementsTab />;
       case "residents":
         return <ResidentsTab />;
+      case "events":
+        return <EventsTab />;
       case "dues":
         return (
           <div className="space-y-6">

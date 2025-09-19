@@ -1,4 +1,4 @@
-import { Home, Megaphone, Users, CreditCard, Settings } from "lucide-react";
+import { Home, Megaphone, Users, CreditCard, Calendar, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface AdminSidebarProps {
@@ -10,6 +10,7 @@ const sidebarItems = [
   { id: "dashboard", label: "Dashboard", icon: Home },
   { id: "announcements", label: "Announcements", icon: Megaphone },
   { id: "residents", label: "Residents", icon: Users },
+  { id: "events", label: "Events & Calendar", icon: Calendar },
   { id: "dues", label: "Dues & Payments", icon: CreditCard },
   { id: "settings", label: "Settings", icon: Settings },
 ];
